@@ -20,7 +20,7 @@
                 </div>
             </a>
             <ul id="menu">
-                <li onclick="loadPageIntoDiv('agendamento.html', 'Func')" >
+                <li id="btnAgendamentos" onclick="loadPageIntoDiv('agendamento.html', 'Func')">
                     <img src="./img/Calendario.png" alt="">
                     <div><p class="TextMenu">Agendamentos</p></div>
                 </li>
@@ -55,27 +55,64 @@
 
 <script>
     const load = document.getElementById('Func');
-    load.innerHTML = loadPageIntoDiv('agendamento.html', 'Func');
-    
-    function loadPageIntoDiv(url, divId, event) {
-        fetch(url)
-          .then(response => response.text())
-          .then(data => {
-            const divSec= document.getElementById(divId)
-            divSec.innerHTML = data;
 
-          })
-          .catch(error => console.error('Erro ao carregar a página:', error));
+    function carregarAgendamentos(){
+        try{
+            const btnAgendamentos = document.getElementById('btnAgendamentos');
+            // console.log(btnAgendamentos)
+            btnAgendamentos.classList.add('funcionalidadeSelecionada')
+            
+            const headerAgendamentos = document.getElementById('titleAgendamentos')
+            // console.log(headerAgendamentos)
+            if(headerAgendamentos){
+                headerAgendamentos.click()
+
+            }
+
+        } catch(erro){
+            console.log(erro)
+        }
+
     }
+    
+    async function loadPageIntoDiv(url, divId, event, loadFunc) {
+        try{
+            const response = await fetch(url);
+            const data = await response.text();
+            
+            const divSec = document.getElementById(divId);
+            divSec.innerHTML = data;
+            
+            if (url === 'agendamento.html'){
+                carregarAgendamentos()
+            }
+            
+        } catch(erro){
+            console.error('Erro ao carregar a página:', error);
+        }
+    }
+
     const Menu = document.querySelectorAll("#menu li");
     Menu.forEach(item => {
-    item.addEventListener("click", function () {
-    // Remove a classe de todos os itens
-        Menu.forEach(el => el.classList.remove("funcionalidadeSelecionada"));
+        item.addEventListener("click", function () {
+            // Remove a classe de todos os itens
+            Menu.forEach(el => el.classList.remove("funcionalidadeSelecionada"));
+            
+            // Adiciona ao item clicado
+            this.classList.add("funcionalidadeSelecionada");
+        });
+    
 
-        // Adiciona ao item clicado
-        this.classList.add("funcionalidadeSelecionada");
-    });
+    (async () => {
+    try {
+        await loadPageIntoDiv('agendamento.html', 'Func');
+
+    } catch(erro) {
+        console.log("Erro no carregamento inicial:", erro);
+    }
+})();
+
 });
 </script>
+<script src="script/agendamento.js" ></script>
 </html>

@@ -1332,3 +1332,5 @@ function carregarCalendario(){
 
     carregarReservasCalendario();
 }
+
+// carregarCalendario()
