@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senac Hall</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search">
+    
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="stylesheet" href="styles/calendario.css">
+    <link rel="stylesheet" href="styles/salas.css">
+    <link rel="stylesheet" href="styles/usuarios.css">
+</head>
+<body>
+    
+    <div class="containerApp">
+        <nav>
+            <a href="/index.html">
+                <div class="logo">
+                    <img width="100" src="img/image.png" alt="">
+                </div>
+            </a>
+            <ul id="menu">
+                <li id="btnAgendamentos" onclick="loadPageIntoDiv('agendamento.html', 'Func')">
+                    <img src="./img/Calendario.png" alt="">
+                    <div><p class="TextMenu">Agendamentos</p></div>
+                </li>
+                <li onclick="loadPageIntoDiv('salas.html', 'Func')">
+                    <img src="./img/Salas.png" alt="">
+                    <div><p class="TextMenu">Salas</p></div>
+                </li>
+                <li onclick="loadPageIntoDiv('usuarios.html', 'Func')">
+                    <img src="./img/Perfil.png" alt="">
+                    <div><p class="TextMenu">Usuários</p></div>
+                </li>
+                <li>
+                    <img src="./img/Instrutor.png" alt="">
+                    <div><p class="TextMenu">Pedidos de Instrutores</p></div>
+                </li>
+                <li>
+                    <img src="./img/Bloqueio.png" alt="">
+                    <div><p class="TextMenu">Bloqueios de Agendamentos</p></div>
+                </li>
+                <li>
+                    <img src="./img/Sair.png" alt="">
+                    <div><p class="TextMenu">Sair</p></div>
+                </li>
+                
+            </ul>
+        </nav>
+        
+        <div class="containerFuncionalidade" id="Func">
+        </div>
+    </div>
+
+    <script src="script/main.js"></script>
+    <script src="script/agendamento.js"></script>
+</body>
+</html>

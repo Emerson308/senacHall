@@ -1,0 +1,346 @@
+:root {
+    --AZUL: #004A8D;
+    --LARANJA: #F7941D;
+    --BORDA: #B0BCCB;
+    --CINZA-CAIXA: #e0e6ed;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f1f1f1;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+a{
+    text-decoration: none;
+    color: none;
+}
+
+.containerApp{
+    display: flex;
+    width: 100dvw;
+    max-height: 100dvh;
+    height: 100dvh;
+    overflow: hidden;
+}
+
+nav{
+    width: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.containerFuncionalidade{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+    margin-bottom: 40px;
+}
+
+.funcionalidade{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+.headerFuncionalidade{
+    border-bottom: 3px solid #F7941D;
+    padding: 10px 20px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+
+
+
+.logo{
+    width: 100%;
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.logo img{
+    width: 80%;
+    margin: 0 auto;
+}
+
+ul{
+    flex: 1;
+    overflow: auto;
+}
+
+li{
+    padding: 15px 0;
+    padding-left: 30px;
+    cursor: pointer;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+
+}
+
+li:hover{
+    background-color: #edf2f6;
+    transform: scale(1.2);
+}
+
+.funcionalidadeSelecionada{
+    background-color: #edf2f6;
+    border-right: 5px solid #F7941D;
+}
+
+li img{
+    height: 60%;
+}
+
+li div{
+    display: flex;
+    align-items: center;
+}
+
+
+.perfileFuncionalidade{
+    display: flex;
+    justify-content: space-between;
+}
+
+.perfileFuncionalidade h2{
+    color: #004A8D;
+    font-size: 34px;
+}
+
+.perfileFuncionalidade .perfil{
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.perfil div{
+    white-space: nowrap;
+    flex-grow: 1;
+    min-width: 0;
+}
+
+.perfil img{
+    width: 45px;
+    height: 45px;
+}
+
+.descricaoFuncionalidade{
+    color: #909090;
+}
+
+
+nav ul li img {
+    width: 38px;
+    height: 38px;
+}
+
+.funcionalidade ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex: 20%;
+}
+
+
+
+
+.funcionalidade ul li{
+    border: var(--BORDA) 2px solid;
+    border-radius: 10px;
+    width: 250px;
+    height: 45px;
+    font-size: 19px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #004A8D;
+    color: white;
+    padding-left: 0px;
+}
+
+.TextMenu {
+    font-weight: 600;
+    color: var(--AZUL);
+}
+
+@media (max-width: 1024px) {
+    .containerApp {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        max-height: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        min-width: 200px;
+        justify-content: center;
+        padding: 10px 15px;
+    }
+
+    .logo {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .containerFuncionalidade {
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
+
+    .perfileFuncionalidade {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .perfileFuncionalidade h2 {
+        font-size: 28px;
+    }
+
+    .funcionalidade ul li {
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .containerApp {
+        overflow-x: hidden;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    nav ul {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    nav ul li {
+        min-width: 150px;
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    nav ul li img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .containerFuncionalidade {
+        padding: 0 15px;
+    }
+
+    .headerFuncionalidade {
+        padding: 15px;
+    }
+
+    .perfileFuncionalidade h2 {
+        font-size: 24px;
+    }
+
+    .perfil {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .perfil img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .descricaoFuncionalidade {
+        font-size: 14px;
+    }
+
+    .funcionalidade {
+        margin-top: 20px;
+    }
+
+    .funcionalidade ul li {
+        width: 100%;
+        max-width: 280px;
+        height: 45px;
+        font-size: 14px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        height: auto;
+        max-height: 200px;
+    }
+
+    nav ul li {
+        min-width: auto;
+        width: 100%;
+        margin: 2px 0;
+    }
+
+    .perfileFuncionalidade h2 {
+        font-size: 20px;
+    }
+
+    .headerFuncionalidade {
+        padding: 10px;
+    }
+
+    .containerFuncionalidade {
+        padding: 0 10px;
+    }
+
+    .funcionalidade ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .funcionalidade ul li {
+        width: 100%;
+        margin: 0;
+    }
+}
+

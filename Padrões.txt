@@ -1,0 +1,43 @@
+Esse é um txt organizando padrões do projeto para evitar problemas depois
+
+- Sempre que for criar uma nova tela voce faz uma cópia de agendamento ou salas .html e apaga o conteudo da div funcionalidade 
+pra fazer sua funcionalidade
+- Sempre que for fazer sua tela crie um css para fazer o estilo da sua funcionalidade e evitar merge conflicts
+
+
+{
+    "Informática 3": [["19/06", ]]
+}
+
+Padrão dos botões
+
+.ExemploBotãoAzul{
+    border: black 2px solid;
+    border-radius: 10px;
+    width: px;
+    height: px;
+    font-size: 19px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    background-color: #004A8D;
+    color: white;
+}
+
+Padrão das funcionalidades 
+
+.funcionalidade{
+    border: black 1px solid;
+    flex: 1;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+Padrão De Cor
+
+AZUL Senac: #004A8D
+LARANJA Senac: #F7941D
+ 
+
