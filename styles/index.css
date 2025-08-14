@@ -15,11 +15,6 @@
 body{
     background-color: #f1f1f1;
     font-family: Arial, Helvetica, sans-serif;
-    /* font-family: mont; */
-    /* overflow: hidden; */
-    /* font-family: go; */
-    /* width: 100dvw; */
-    /* height: 100dvh; */
 
 }
 
@@ -29,17 +24,14 @@ a{
 }
 
 .containerApp{
-    /* border: 1px solid green; */
     display: flex;
     width: 100dvw;
-    /* max-width: 10dvw; */
     max-height: 100dvh;
     height: 100dvh;
     overflow: hidden;
 }
 
 nav{
-    /* border: 1px solid black; */
     width: 300px;
     background-color: white;
     display: flex;
@@ -48,34 +40,14 @@ nav{
 
 
 .containerFuncionalidade{
-    /* width: min-content; */
-    
-    /* overflow: auto; */
     flex: 1;
     display: flex;
-    /* border: 1px solid red; */
     flex-direction: column;
     padding: 0 40px;
     margin-bottom: 40px;
-    /* flex-basis: content; */
-    /* margin: 0 40px; */
-    /* margin-top: 10px; */
-    /* height: auto; */
-    /* display: flex; */
-    /* margin-bottom: 40px; */
-    /* max-height: max-content; */
-    /* height: auto; */
-    /* flex-direction: column; */
 }
 
 .funcionalidade{
-    /* border: palegreen 1px solid; */
-    /* overflow: auto; */
-    /* flex: 1; */
-    /* max-height: min-content; */
-    /* max-height: fit-content; */
-    /* max-height: 10px; */
-    /* height: fit-content; */
     margin-top: 30px;
     display: flex;
     flex-direction: column;
@@ -83,9 +55,7 @@ nav{
 
 
 .headerFuncionalidade{
-    /* border: 1px solid green; */
     border-bottom: 3px solid #F7941D;
-    /* height: 110px; */
     padding: 10px 20px;
     gap: 15px;
     display: flex;
@@ -98,9 +68,7 @@ nav{
 
 .logo{
     width: 100%;
-    /* height: 200px; */
     padding: 30px 0;
-    /* background-color: gold; */
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -109,20 +77,16 @@ nav{
 .logo img{
     width: 80%;
     margin: 0 auto;
-    /* height: 100%; */
 }
 
 ul{
-    /* border: 1px solid orange; */
     flex: 1;
     overflow: auto;
 }
 
 li{
-    /* border: 1px solid pink; */
     padding: 15px 0;
     padding-left: 30px;
-    /* background-color: #ccc; */
     cursor: pointer;
     display: flex;
     gap: 15px;
@@ -131,6 +95,7 @@ li{
 
 li:hover{
     background-color: #edf2f6;
+    transform: scale(1.2);
 }
 
 .funcionalidadeSelecionada{
@@ -140,44 +105,33 @@ li:hover{
 
 li img{
     height: 60%;
-    /* color: blue; */
 }
 
 li div{
     display: flex;
     align-items: center;
-    /* border: 1px solid black; */
 }
 
 
 .perfileFuncionalidade{
     display: flex;
     justify-content: space-between;
-    /* border: 1px solid purple; */
-    /* height: fit-content; */
 }
 
 .perfileFuncionalidade h2{
     color: #004A8D;
-    /* border: 1px solid pink; */
     font-size: 34px;
 }
 
 .perfileFuncionalidade .perfil{
     display: flex;
-    /* border: 1px solid red; */
     gap: 15px;
     flex-wrap: wrap;
     align-items: center;
-    /* width: auto; */
 }
 
 .perfil div{
-    /* height: auto; */
-    /* width: auto; */
-    /* width: min-content; */
     white-space: nowrap;
-    /* text-align: center; */
     flex-grow: 1;
     min-width: 0;
 }
@@ -188,8 +142,6 @@ li div{
 }
 
 .descricaoFuncionalidade{
-    /* margin-top: auto; */
-    /* border: 1px solid rebeccapurple; */
     color: #909090;
 }
 
@@ -208,208 +160,6 @@ nav ul li img {
 }
 
 
-.navbarSalas{
-    display: flex;
-    justify-content: space-between;
-    padding: 0 30px;
-    height: 50px;
-    /* border: 1px solid black; */
-    align-items: center;
-}
-
-.buscar{
-    display: flex;
-    height: 100%;
-    /* border: 1px solid black; */
-    align-items: center;
-    gap: 10px;
-}
-
-.filtroSalas{
-    border: none;
-    background-color: none;
-    background-color: #1168a7;
-    color: white;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 2px solid var(--BORDA);
-    cursor: pointer;
-}
-
-.filtroSalas:hover{
-    background-color: #004A8D;
-    color: white;
-}
-
-.barraBusca{
-    height: 100%;
-    /* border: 1px solid black; */
-    /* padding: auto; */
-    display: flex;
-    border-radius: 2px;
-    width: 280px;
-}
-
-.barraBusca input{
-    height: 100%;
-    border: none;
-    background-color: none;
-    border: 2px solid var(--BORDA);
-    border-right: none;
-    border-radius: 5px;
-    padding-left: 10px;
-    flex: 1;
-    font-size: 18px;
-    border-top-right-radius: 0px;
-    border-bottom-right-radius: 0px;
-}
-
-.barraBusca button{
-    border: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 2px solid var(--BORDA);
-    border-radius: 5px;
-    height: 100%;
-    width: 40px;
-    border-top-left-radius: 0px;
-    border-bottom-left-radius: 0px;
-    cursor: pointer;
-}
-
-.criarSala{
-    /* height: auto; */
-    border: none;
-    font-size: 19px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    /* border: 1px solid bl; */
-    background-color: #1168a7;
-    color: white;
-    height: 100%;
-    width: 180px;
-    border: 2px solid var(--BORDA);
-    /* padding: 0 20px; */
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.criarSala:hover{
-    background-color: #004A8D;
-    color: white;
-}
-
-.containerSalas{
-    /* border: 1px solid black; */
-    /* height: 100%; */
-    padding: 0 35px;
-    margin-top: 10px;
-    flex: 1;
-    /* border: 1px solid black; */
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.containerSalas h2{
-    color: black;
-
-}
-
-.salas{
-    /* border: 1px solid black; */
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    overflow: auto;
-    gap: 20px;
-    max-height: 60dvh;
-    border: 2px solid var(--BORDA);
-    padding: 15px;
-    border-radius: 5px;
-    background-color: var(--CINZA-CAIXA);
-}
-
-.sala{
-    border: 1px solid var(--BORDA);
-    border-radius: 10px;
-    background-color: white;
-    /* margin-bottom: 20px; */
-    /* padding: 0 15px; */
-}
-
-.salaCard{
-    flex-direction: row;
-    display: flex;
-    height: 100%;
-    height: 70px;
-    margin: 0 15px;
-    gap: 35px;
-}
-
-.sala h4{
-    /* border: 1px solid black; */
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    font-size: 28px;
-}
-
-.salaInfos{
-    /* border: 1px solid black; */
-    display: flex;
-    flex-direction: column;
-    /* justify-content: space-evenly; */
-    gap: 15px;
-    justify-content: center;
-    flex: 1;
-    /* padding-left: 15px; */
-}
-
-.salaInfos div{
-    display: flex;
-}
-
-.salaInfos div p{
-    color: #808080;
-}
-
-.salaBtns{
-    width: 100px;
-    /* border: 1px solid red; */
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    /* padding: 10px 0; */
-}
-
-.salaBtns div{
-    border: 1px solid var(--BORDA);
-    height: 40px;
-    width: 40px;
-    display: flex;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    border-radius: 5px;
-    /* flex: 1; */
-}
-
-.salaEditar{
-    background-color: #1168a7;
-    cursor: pointer;
-}
-
-.salaExcluir{
-    background-color: red;
-    cursor: pointer;
-}
 
 .funcionalidade ul li{
     border: var(--BORDA) 2px solid;
@@ -429,5 +179,166 @@ nav ul li img {
 .TextMenu {
     font-weight: 600;
     color: var(--AZUL);
+}
+
+@media (max-width: 1024px) {
+    .containerApp {
+        flex-direction: column;
+        height: auto;
+        min-height: 100vh;
+    }
+
+    nav {
+        width: 100%;
+        height: auto;
+        max-height: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        min-width: 200px;
+        justify-content: center;
+        padding: 10px 15px;
+    }
+
+    .logo {
+        padding: 20px 0;
+        text-align: center;
+    }
+
+    .logo img {
+        width: 60px;
+    }
+
+    .containerFuncionalidade {
+        padding: 0 20px;
+        margin-bottom: 20px;
+    }
+
+    .perfileFuncionalidade {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+
+    .perfileFuncionalidade h2 {
+        font-size: 28px;
+    }
+
+    .funcionalidade ul li {
+        width: 200px;
+        height: 40px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .containerApp {
+        overflow-x: hidden;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    nav ul {
+        gap: 10px;
+        padding: 10px;
+    }
+
+    nav ul li {
+        min-width: 150px;
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    nav ul li img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .logo img {
+        width: 50px;
+    }
+
+    .containerFuncionalidade {
+        padding: 0 15px;
+    }
+
+    .headerFuncionalidade {
+        padding: 15px;
+    }
+
+    .perfileFuncionalidade h2 {
+        font-size: 24px;
+    }
+
+    .perfil {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .perfil img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .descricaoFuncionalidade {
+        font-size: 14px;
+    }
+
+    .funcionalidade {
+        margin-top: 20px;
+    }
+
+    .funcionalidade ul li {
+        width: 100%;
+        max-width: 280px;
+        height: 45px;
+        font-size: 14px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        height: auto;
+        max-height: 200px;
+    }
+
+    nav ul li {
+        min-width: auto;
+        width: 100%;
+        margin: 2px 0;
+    }
+
+    .perfileFuncionalidade h2 {
+        font-size: 20px;
+    }
+
+    .headerFuncionalidade {
+        padding: 10px;
+    }
+
+    .containerFuncionalidade {
+        padding: 0 10px;
+    }
+
+    .funcionalidade ul {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .funcionalidade ul li {
+        width: 100%;
+        margin: 0;
+    }
 }
 

@@ -1,158 +1,417 @@
+:root {
+  --AZUL: #004A8D;
+  --LARANJA: #F7941D;
+  --BORDA: #B0BCCB;
+  --CINZA-CAIXA: #e0e6ed;
+  --BORDA-ESCURA: #6E7A89;
+  --VERDE-SUCESSO: #28a745;
+  --AMARELO-AVISO: #ffc107;
+  --SOMBRA-SUAVE: rgba(0, 0, 0, 0.1);
+}
 
+* {
+  font-family: "Poppins", sans-serif;
+}
 
-.containerAgendamentos{
-    /* border: 1px solid red; */
+.containerAgendamentos {
     flex: 1;
     overflow-y: auto;
     justify-content: space-between;
-    /* max-height: 300px; */
-    /* height: 100%; */
     display: flex;
     flex-direction: column;
+    gap: 20px;
+    padding: 10px;
 }
 
-.calendario{
-    border: black 1px solid;
-    /* flex: 80%; */
-    /* flex: 1; */
-    /* min-height: 0; */
-    max-height: 400px;
+.calendario {
+    border: 2px solid var(--BORDA);
+    border-radius: 12px;
+    max-height: 450px;
     display: flex;
     overflow: auto;
-    
+    background: linear-gradient(135deg, #f8f9fa 0%, var(--CINZA-CAIXA) 100%);
+    box-shadow: 0 4px 15px var(--SOMBRA-SUAVE);
+    transition: box-shadow 0.3s ease;
 }
 
-.botoesAgendamentos{
-    /* flex: 20%; */
-    /* flex: ; */
-    /* border: 1px solid black; */
-    padding: 40px 0;
+.botoesAgendamentos {
+    padding: 30px 0;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    gap: 15px;
+    flex-wrap: wrap;
 }
 
-
-.salasAgendamentos{
-    /* border: 1px solid black; */
-    width: 160px;
+.salasAgendamentos {
+    width: 180px;
+    min-width: 180px;
 }
 
-.salasAgendamentos div{
+.salasAgendamentos div {
     width: 100%;
 }
 
-.moduloCalendario{
-    height: 90px;
-    border: 1px solid black;
+.moduloCalendario {
+    height: 95px;
+    border: 1px solid var(--BORDA-ESCURA);
+    transition: all 0.2s ease;
 }
 
-.salaAgendamentos{
-    background-color: #D86700;
+.moduloCalendario:hover {
+    border-color: var(--AZUL);
+    background-color: rgba(0, 74, 141, 0.05);
+}
+
+.salaAgendamentos {
+    background: linear-gradient(135deg, var(--LARANJA) 0%, #e6831a 100%);
     color: white;
     display: flex;
-    font-size: 19px;
-    /* text-align: center; */
+    font-size: 16px;
+    font-weight: 600;
     align-items: center;
     justify-content: flex-start;
-    padding-left: 15px;
-    padding-right: 5px;
+    padding: 0 15px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 0;
 }
 
-.diaAgendamentos{
+
+.diaAgendamentos {
     flex: 1;
     min-width: 0;
 }
 
-.moduloAgendamentos{
+.moduloAgendamentos {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 4px
+    gap: 6px;
+    padding: 8px 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
-.dataAgendamentos{
+.moduloAgendamentos:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.dataAgendamentos {
     display: flex;
     flex-direction: column;
-    background-color: #004A8D;
+    background: linear-gradient(135deg, var(--AZUL) 0%, #0056a3 100%);
     color: white;
+    font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
-.dataAgendamentos div{
+.dataAgendamentos div {
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: center;
-    /* border: 1px solid white; */
     flex: 1;
+    padding: 8px 4px;
 }
 
+.dataAgendamentos div:first-child {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
 
-.botoesAgendamentos div{
-    border: black 2px solid;
-    border-radius: 10px;
-    width: 250px;
-    height: 70px;
-    font-size: 19px;
+.dataAgendamentos div:last-child {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.botoesAgendamentos div {
+    border: 2px solid var(--AZUL);
+    border-radius: 12px;
+    width: 240px;
+    height: 60px;
+    font-size: 16px;
+    font-weight: 600;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    background-color: #004A8D;
+    background: linear-gradient(135deg, var(--AZUL) 0%, #0056a3 100%);
     color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px var(--SOMBRA-SUAVE);
+    position: relative;
+    overflow: hidden;
 }
 
+.botoesAgendamentos div:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 74, 141, 0.3);
+    background: linear-gradient(135deg, #0056a3 0%, var(--AZUL) 100%);
+}
 
-.reserva{
-    width: 80%;
+.botoesAgendamentos div:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px var(--SOMBRA-SUAVE);
+}
+
+.reserva {
+    width: 85%;
     text-align: center;
-    border-radius: 10px;
-    padding: 2px 5px;
-    /* padding: 1px 5px; */
-    font-size: 13px;
+    border-radius: 8px;
+    padding: 4px 8px;
+    font-size: 12px;
     color: white;
-    font-weight: bold;
+    font-weight: 600;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+    cursor: pointer;
+    position: relative;
 }
 
-.rManha{
-    background-color: rgb(217, 217, 0);
-    background-color: #fbad18;
-    /* color: black; */
+.reserva:hover {
+    transform: scale(1.05);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
 }
 
-.rTarde{
-    background-color: #D86700;
+.rManha {
+    background: linear-gradient(135deg, #fbad18 0%, #f39c12 100%);
+    border-left: 3px solid #e67e22;
 }
 
-.rNoite{
-    background-color: #004A8D;
+.rTarde {
+    background: linear-gradient(135deg, #D86700 0%, #c0392b 100%);
+    border-left: 3px solid #a93226;
 }
 
-.voltarAvancar{
+.rNoite {
+    background: linear-gradient(135deg, var(--AZUL) 0%, #1e3a8a 100%);
+    border-left: 3px solid #1e40af;
+}
+
+.voltarAvancar {
     display: flex;
     align-items: center;
-    /* gap: 15px; */
-    padding: 0 10px;
+    padding: 0 15px;
     justify-content: space-around;
+    gap: 10px;
 }
 
-.voltarAvancar div{
-    border: 1px solid black;
+.voltarAvancar div {
+    border: 3px solid var(--AZUL);
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50px;
-    background-color: #999999;
-    color: white;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--CINZA-CAIXA) 0%, #d4dadf 100%);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 6px var(--SOMBRA-SUAVE);
 }
 
-.semVoltarCalendario{
-    background-color: #000;
+.voltarAvancar div:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, var(--AZUL) 0%, #0056a3 100%);
+    box-shadow: 0 4px 12px rgba(0, 74, 141, 0.3);
+}
+
+.voltarAvancar div:active {
+    transform: scale(0.95);
+}
+
+.voltarAvancar img {
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+.voltarAvancar div:hover img {
+    filter: brightness(0) invert(1);
+}
+
+@media (max-width: 1024px) {
+    .calendario {
+        max-height: 400px;
+        overflow-x: auto;
+    }
+
+    .salasAgendamentos {
+        width: 150px;
+        min-width: 150px;
+    }
+
+    .salaAgendamentos {
+        font-size: 14px;
+        padding: 0 10px;
+    }
+
+    .moduloCalendario {
+        height: 85px;
+    }
+
+    .botoesAgendamentos {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .botoesAgendamentos div {
+        width: 200px;
+        height: 55px;
+        font-size: 15px;
+    }
+
+    .dataAgendamentos div:first-child {
+        font-size: 12px;
+    }
+
+    .dataAgendamentos div:last-child {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .containerAgendamentos {
+        gap: 15px;
+        padding: 5px;
+    }
+
+    .calendario {
+        max-height: 350px;
+        border-radius: 8px;
+    }
+
+    .salasAgendamentos {
+        width: 120px;
+        min-width: 120px;
+    }
+
+    .salaAgendamentos {
+        font-size: 12px;
+        padding: 0 8px;
+    }
+
+    .moduloCalendario {
+        height: 75px;
+    }
+
+    .dataAgendamentos div:first-child {
+        font-size: 11px;
+    }
+
+    .dataAgendamentos div:last-child {
+        font-size: 14px;
+    }
+
+    .reserva {
+        font-size: 10px;
+        padding: 2px 4px;
+        width: 90%;
+    }
+
+    .botoesAgendamentos {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .botoesAgendamentos div {
+        width: 90%;
+        max-width: 300px;
+        height: 50px;
+        font-size: 14px;
+    }
+
+    .voltarAvancar {
+        padding: 0 10px;
+    }
+
+    .voltarAvancar div {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendario {
+        max-height: 280px;
+        border-radius: 6px;
+    }
+
+    .salasAgendamentos {
+        width: 100px;
+        min-width: 100px;
+    }
+
+    .salaAgendamentos {
+        font-size: 10px;
+        padding: 0 6px;
+    }
+
+    .moduloCalendario {
+        height: 65px;
+    }
+
+    .dataAgendamentos div:first-child {
+        font-size: 9px;
+    }
+
+    .dataAgendamentos div:last-child {
+        font-size: 12px;
+    }
+
+    .reserva {
+        font-size: 9px;
+        padding: 1px 3px;
+        width: 95%;
+    }
+
+    .moduloAgendamentos {
+        gap: 3px;
+        padding: 4px 2px;
+    }
+
+    .botoesAgendamentos div {
+        height: 45px;
+        font-size: 13px;
+    }
+
+    .voltarAvancar div {
+        width: 30px;
+        height: 30px;
+        border-width: 2px;
+    }
+
+    .voltarAvancar img {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 380px) {
+    .calendario {
+        flex-direction: column;
+        max-height: none;
+    }
+
+    .salasAgendamentos {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+    }
+
+    .salasAgendamentos div {
+        min-width: 100px;
+        flex-shrink: 0;
+    }
+
+    .diaAgendamentos {
+        min-height: 80px;
+    }
 }

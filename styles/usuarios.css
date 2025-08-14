@@ -3,55 +3,29 @@
     --LARANJA: #F7941D;
     --BORDA: #B0BCCB;
     --CINZA-CAIXA: #e0e6ed;
-    
 }
-*{
+
+* {
     font-family: "Poppins", sans-serif;
 }
 
-.funcionalidade ul{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    flex: 20%;
-}
-
-.funcionalidade{
-    /* height: 550px; */
-    /* border: 1px solid black; */
-    margin-top: 30px;
-    display: flex;
-    flex-direction: column;
-    /* gap: 10px; */
-    flex: 1;
-    
-}
-
-.navbarUsuarios{
+.navbarUsuarios {
     display: flex;
     justify-content: space-between;
     padding: 0 30px;
     height: 50px;
-    /* border: 1px solid black; */
     align-items: center;
 }
 
-.usuarioInfos div{
-    gap: 10px;
-}
-
-.buscar{
+.buscar {
     display: flex;
     height: 100%;
-    /* border: 1px solid black; */
     align-items: center;
     gap: 10px;
 }
 
-.filtrousuarios{
+.filtroUsuarios {
     border: none;
-    background-color: none;
     background-color: #1168a7;
     color: white;
     padding: 10px;
@@ -59,26 +33,24 @@
     border-radius: 5px;
     border: 2px solid var(--BORDA);
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.filtrousuarios:hover{
-    background-color: #004A8D;
+.filtroUsuarios:hover {
+    background-color: var(--AZUL);
     color: white;
 }
 
-.barraBusca{
+.barraBusca {
     height: 100%;
-    /* border: 1px solid black; */
-    /* padding: auto; */
     display: flex;
     border-radius: 2px;
     width: 280px;
 }
 
-.barraBusca input{
+.barraBusca input {
     height: 100%;
     border: none;
-    background-color: none;
     border: 2px solid var(--BORDA);
     border-right: none;
     border-radius: 5px;
@@ -87,9 +59,15 @@
     font-size: 18px;
     border-top-right-radius: 0px;
     border-bottom-right-radius: 0px;
+    transition: border-color 0.3s ease;
 }
 
-.barraBusca button{
+.barraBusca input:focus {
+    outline: none;
+    border-color: var(--AZUL);
+}
+
+.barraBusca button {
     border: none;
     display: flex;
     align-items: center;
@@ -101,51 +79,51 @@
     border-top-left-radius: 0px;
     border-bottom-left-radius: 0px;
     cursor: pointer;
+    background-color: white;
+    transition: all 0.3s ease;
 }
 
-.criarUsuario{
-    /* height: auto; */
+.barraBusca button:hover {
+    background-color: var(--CINZA-CAIXA);
+}
+
+.criarUsuario {
     border: none;
     font-size: 19px;
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
-    /* border: 1px solid bl; */
     background-color: #1168a7;
     color: white;
     height: 100%;
     width: 180px;
     border: 2px solid var(--BORDA);
-    /* padding: 0 20px; */
     border-radius: 10px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.criarusuario:hover{
-    background-color: #004A8D;
+.criarUsuario:hover {
+    background-color: var(--AZUL);
     color: white;
 }
 
-.containerUsuarios{
-    /* border: 1px solid black; */
-    /* height: 100%; */
+.containerUsuarios {
     padding: 0 35px;
     margin-top: 10px;
     flex: 1;
-    /* border: 1px solid black; */
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.containerusuarios h2{
+.containerUsuarios h2 {
     color: black;
-
+    margin-bottom: 10px;
 }
 
-.usuarios{
-    /* border: 1px solid black; */
+.usuarios {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -158,62 +136,68 @@
     background-color: var(--CINZA-CAIXA);
 }
 
-.usuario{
+.usuario {
     border: 1px solid var(--BORDA);
     border-radius: 10px;
     background-color: white;
-    /* margin-bottom: 20px; */
-    /* padding: 0 15px; */
+    overflow: visible;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-.usuarioCard{
+.usuario:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.usuarioCard {
     flex-direction: row;
     display: flex;
-    height: 100%;
     height: 70px;
     margin: 0 15px;
     gap: 35px;
+    transition: box-shadow 0.3s ease-out;
 }
 
-.usuario h4{
-    /* border: 1px solid black; */
+.usuario h4 {
     display: flex;
     text-align: center;
     align-items: center;
     justify-content: center;
     font-size: 28px;
+    color: var(--AZUL);
 }
 
-.usuarioInfos{
-    /* border: 1px solid black; */
+.usuarioInfos {
     display: flex;
     flex-direction: column;
-    /* justify-content: space-evenly; */
     gap: 15px;
     justify-content: center;
     flex: 1;
-    /* padding-left: 15px; */
 }
 
-.usuarioInfos div{
+.usuarioInfos div {
     display: flex;
+    gap: 8px;
 }
 
-.usuarioInfos div p{
+.usuarioInfos div p {
     color: #808080;
 }
 
-.usuarioBtns{
+.usuarioInfos div p:first-child {
+    font-weight: 600;
+    color: #555;
+}
+
+.usuarioBtns {
     width: 100px;
-    /* border: 1px solid red; */
     display: flex;
     gap: 10px;
     align-items: center;
     justify-content: center;
-    /* padding: 10px 0; */
 }
 
-.usuarioBtns div{
+.usuarioBtns div {
     border: 1px solid var(--BORDA);
     height: 40px;
     width: 40px;
@@ -222,31 +206,187 @@
     text-align: center;
     justify-content: center;
     border-radius: 5px;
-    /* flex: 1; */
+    transition: all 0.3s ease;
 }
 
-.usuarioEditar{
+.usuarioEditar {
     background-color: #1168a7;
     cursor: pointer;
 }
 
-.usuarioExcluir{
-    background-color: red;
+.usuarioEditar:hover {
+    background-color: var(--AZUL);
+    transform: scale(1.05);
+}
+
+.usuarioExcluir {
+    background-color: #dc3545;
     cursor: pointer;
 }
 
-.funcionalidade ul li{
-    border: var(--BORDA) 2px solid;
-    border-radius: 10px;
-    width: 250px;
-    height: 45px;
-    font-size: 19px;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    background-color: #004A8D;
-    color: white;
-    padding-left: 0px;
+.usuarioExcluir:hover {
+    background-color: #c82333;
+    transform: scale(1.05);
+}
+
+@media (max-width: 1024px) {
+    .navbarUsuarios {
+        flex-direction: column;
+        gap: 15px;
+        height: auto;
+        padding: 20px 30px;
+    }
+
+    .buscar {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .barraBusca {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .criarUsuario {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .containerUsuarios {
+        padding: 0 20px;
+    }
+
+    .usuario h4 {
+        font-size: 24px;
+    }
+
+    .usuarioCard {
+        gap: 20px;
+    }
+
+    .usuarioBtns {
+        width: 80px;
+    }
+
+    .usuarioBtns div {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbarUsuarios {
+        padding: 15px 20px;
+        gap: 20px;
+    }
+
+    .buscar {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .barraBusca {
+        width: 100%;
+    }
+
+    .filtroUsuarios {
+        width: 100%;
+        max-width: 200px;
+        align-self: center;
+    }
+
+    .criarUsuario {
+        width: 100%;
+        max-width: 250px;
+        align-self: center;
+    }
+
+    .containerUsuarios {
+        padding: 0 15px;
+    }
+
+    .usuarios {
+        max-height: 50vh;
+        gap: 15px;
+    }
+
+    .usuarioCard {
+        flex-direction: column;
+        height: auto;
+        gap: 15px;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    .usuario h4 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .usuarioInfos {
+        align-items: center;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .usuarioInfos div {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .usuarioBtns {
+        width: 100%;
+        justify-content: center;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbarUsuarios {
+        padding: 10px 15px;
+    }
+
+    .containerUsuarios {
+        padding: 0 10px;
+    }
+
+    .usuarios {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .usuarioCard {
+        margin: 0 10px;
+        padding: 10px 0;
+    }
+
+    .usuario h4 {
+        font-size: 18px;
+    }
+
+    .usuarioInfos div p {
+        font-size: 12px;
+    }
+
+    .usuarioBtns div {
+        width: 30px;
+        height: 30px;
+    }
+
+    .usuarioBtns div img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .barraBusca input {
+        font-size: 16px;
+    }
+
+    .criarUsuario,
+    .filtroUsuarios {
+        font-size: 16px;
+        padding: 12px;
+    }
 }
 
